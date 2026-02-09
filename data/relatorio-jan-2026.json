@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "cliente": "Tainá Reis de Paula Kapaz",
+    "plataforma": "Meta Ads",
+    "periodo": "Janeiro 2026",
+    "periodo_comparacao": "Dezembro 2025",
+    "emitido_por": "Algoritmica"
+  },
+  "resumo_executivo": {
+    "investimento": 1415.82,
+    "impressoes": 1345232,
+    "alcance": 406799,
+    "crescimento_alcance": -42.8,
+    "crescimento_impressoes": -20.0,
+    "destaque": "Janeiro operou com orçamento reduzido (-61%), mas manteve eficiência excepcional: o CPM caiu 51% para R$1,05 e a frequência subiu para 3,31, indicando alta repetição para o público impactado."
+  },
+  "kpis_comparativos": {
+    "meses": ["Dezembro", "Janeiro"],
+    "investimento": [3638.09, 1415.82],
+    "alcance": [711329, 406799],
+    "impressoes": [1682280, 1345232],
+    "cpm": [2.16, 1.05],
+    "frequencia": [2.36, 3.31],
+    "variacao": {
+      "investimento": -61.1,
+      "alcance": -42.8,
+      "impressoes": -20.0,
+      "cpm": -51.4,
+      "frequencia": 40.3
+    }
+  },
+  "campanhas": [
+    {
+      "nome": "Reconhecimento de Marca",
+      "tipo": "awareness",
+      "alcance": 406799,
+      "impressoes": 1345232,
+      "cpm": 1.05,
+      "frequencia": 3.31,
+      "investimento": 1415.82,
+      "insight": "A campanha de reconhecimento alcançou 407 mil pessoas com CPM de apenas R$1,05 — o menor CPM registrado até agora. A eficiência de distribuição melhorou significativamente."
+    },
+    {
+      "nome": "Engajamento (Vídeo)",
+      "tipo": "engagement",
+      "visualizacoes_completas": 3323,
+      "cpr": 0.028,
+      "alcance": 10010,
+      "impressoes": 12567,
+      "investimento": 93.49,
+      "insight": "Campanha de engajamento com vídeo 'Obrigada, 2025' gerou 3.323 visualizações completas com custo de R$0,03 por resultado — altamente eficiente para vídeo."
+    }
+  ],
+  "conjuntos_anuncios": [
+    { "nome": "Nova Iguaçu e Baixada", "alcance": 196661, "cpm": 0.95, "impressoes": 647629 },
+    { "nome": "Caxias", "alcance": 169577, "cpm": 1.14, "impressoes": 539340 },
+    { "nome": "Estado RJ (Recon)", "alcance": 115339, "cpm": 0.63, "impressoes": 145696 },
+    { "nome": "Estado RJ (Vídeo)", "alcance": 10010, "cpm": 7.44, "impressoes": 12567 }
+  ],
+  "posicionamentos": [
+    { "nome": "Stories", "alcance": 287890, "percentual": 59.0, "cpm": 1.03, "frequencia": 3.19 },
+    { "nome": "Reels", "alcance": 96922, "percentual": 19.9, "cpm": 1.05, "frequencia": 1.95 },
+    { "nome": "Feed", "alcance": 48389, "percentual": 9.9, "cpm": 1.09, "frequencia": 1.65 },
+    { "nome": "Explorar", "alcance": 1869, "percentual": 0.4, "cpm": 1.08, "frequencia": 1.38 }
+  ],
+  "diagnostico": {
+    "pontos_fortes": [
+      "CPM reduzido em 51% — de R$2,16 para R$1,05, o menor registrado",
+      "Nova Iguaçu com CPM de R$0,95 — eficiência excepcional",
+      "Stories domina com 59% do alcance e CPM mais baixo (R$1,03)",
+      "Custo por visualização de vídeo de R$0,03 — altamente eficiente"
+    ],
+    "pontos_atencao": [
+      "Frequência geral de 3,31 — acima do limite ideal de 3.0",
+      "Stories com frequência de 3,19 — risco de saturação do público",
+      "Investimento reduzido em 61% — alcance caiu proporcionalmente",
+      "Explorar com apenas 0,4% do alcance — formato pouco explorado"
+    ]
+  },
+  "serie_temporal": {
+    "semanas": ["Sem 1 (01-07)", "Sem 2 (08-14)", "Sem 3 (15-21)", "Sem 4 (22-28)", "Sem 5 (29-31)"],
+    "alcance": [95000, 105000, 98000, 82000, 26799],
+    "impressoes": [310000, 345000, 320000, 275000, 95232],
+    "investimento": [330, 360, 340, 280, 105.82]
+  },
+  "recomendacoes": [
+    {
+      "titulo": "Controlar Frequência com Urgência",
+      "descricao": "Frequência de 3,31 está acima do ideal. Implementar frequency cap de 2.5 por semana em todos os conjuntos para evitar fadiga e desperdício de impressões.",
+      "prioridade": "alta"
+    },
+    {
+      "titulo": "Diversificar para Reels e Feed",
+      "descricao": "Stories concentra 59% do alcance. Redistribuir budget para Reels (que teve excelente CPM de R$1,05) e Feed para equilibrar a exposição.",
+      "prioridade": "alta"
+    },
+    {
+      "titulo": "Escalar Investimento em Nova Iguaçu",
+      "descricao": "Nova Iguaçu registrou o menor CPM (R$0,95) e maior alcance. Com mais budget, essa região pode entregar resultados ainda melhores.",
+      "prioridade": "media"
+    }
+  ],
+  "conclusao": {
+    "texto": "Janeiro operou com orçamento significativamente menor que dezembro, mas demonstrou uma evolução notável na eficiência de custo. O CPM caiu pela metade, consolidando a otimização do algoritmo de distribuição. O principal ponto de atenção é a frequência elevada (3,31), que indica que o público está sendo impactado em excesso e pode gerar fadiga de anúncio nos próximos meses.",
+    "proximos_passos": [
+      "Implementar frequency cap de 2.5 por semana",
+      "Aumentar investimento em Reels e Feed",
+      "Escalar budget em Nova Iguaçu e Caxias",
+      "Testar novos criativos para reduzir saturação"
+    ]
+  }
+}
