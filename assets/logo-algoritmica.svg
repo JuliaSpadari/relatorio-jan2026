@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 100" fill="none">
+  <!-- Icon: black square + orange square -->
+  <rect x="0" y="0" width="42" height="42" fill="#000000"/>
+  <rect x="14" y="14" width="28" height="28" fill="#F7941D"/>
+  <!-- Text: algoritmica -->
+  <text x="60" y="68" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="58" fill="#000000" letter-spacing="-1">algoritm<tspan fill="#000000">i</tspan>ca</text>
+  <!-- Orange dots on 'i' and between 'm' and 'i' -->
+  <rect x="254" y="42" width="8" height="8" fill="#F7941D"/>
+</svg>
