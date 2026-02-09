@@ -13,12 +13,12 @@ Chart.defaults.animation.easing = 'easeOutQuart';
 const COLORS = {
   blue: '#0693e3',
   purple: '#9b51e0',
-  orange: '#F7941D',
+  orange: '#ff931e',
   green: '#00d084',
   red: '#cf2e2e',
   blueAlpha: 'rgba(6,147,227,0.15)',
   purpleAlpha: 'rgba(155,81,224,0.15)',
-  orangeAlpha: 'rgba(247,148,29,0.15)',
+  orangeAlpha: 'rgba(255,147,30,0.15)',
   greenAlpha: 'rgba(0,208,132,0.15)',
 };
 
