@@ -36,18 +36,18 @@ async function generatePDF() {
   // Esperar Chart.js renderizar completamente
   await new Promise(r => setTimeout(r, 2000));
 
-  // Injetar CSS para PDF — forçar fundo escuro em toda a página
+  // Injetar CSS para PDF — forçar fundo claro (tema light Algoritmica)
   await page.addStyleTag({
     content: `
       html, body {
-        background: #111111 !important;
+        background: #ffffff !important;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
       }
       @page {
         size: A4 landscape;
         margin: 0;
-        background: #111111;
+        background: #ffffff;
       }
       .nav, .btn-export, .nav-toggle { display: none !important; }
       .fade-in { opacity: 1 !important; transform: none !important; }

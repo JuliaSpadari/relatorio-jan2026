@@ -1,8 +1,8 @@
 // ===== ALGORITMICA - CHART CONFIGURATIONS - JANEIRO 2026 =====
 
-// Global Chart.js defaults
-Chart.defaults.color = '#999999';
-Chart.defaults.borderColor = 'rgba(255,255,255,0.06)';
+// Global Chart.js defaults — light theme
+Chart.defaults.color = '#6b6b6b';
+Chart.defaults.borderColor = 'rgba(0,0,0,0.06)';
 Chart.defaults.font.family = "'Inter', sans-serif";
 Chart.defaults.plugins.legend.labels.usePointStyle = true;
 Chart.defaults.plugins.legend.labels.pointStyle = 'circle';
@@ -11,17 +11,25 @@ Chart.defaults.animation.duration = 1500;
 Chart.defaults.animation.easing = 'easeOutQuart';
 
 const COLORS = {
-  blue: '#1A3CFF',
-  purple: '#7B2FBE',
-  orange: '#E65100',
-  yellow: '#FFB300',
-  green: '#00CC66',
-  red: '#FF4444',
-  blueAlpha: 'rgba(26,60,255,0.15)',
-  purpleAlpha: 'rgba(123,47,190,0.15)',
-  orangeAlpha: 'rgba(230,81,0,0.15)',
-  yellowAlpha: 'rgba(255,179,0,0.15)',
-  greenAlpha: 'rgba(0,204,102,0.15)',
+  blue: '#0693e3',
+  purple: '#9b51e0',
+  orange: '#ff6900',
+  green: '#00d084',
+  red: '#cf2e2e',
+  blueAlpha: 'rgba(6,147,227,0.15)',
+  purpleAlpha: 'rgba(155,81,224,0.15)',
+  orangeAlpha: 'rgba(255,105,0,0.15)',
+  greenAlpha: 'rgba(0,208,132,0.15)',
+};
+
+// Tooltip style — light theme
+const tooltipStyle = {
+  backgroundColor: '#ffffff',
+  titleColor: '#1a1a1a',
+  bodyColor: '#4a4a4a',
+  borderColor: 'rgba(0,0,0,0.1)',
+  borderWidth: 1,
+  cornerRadius: 8,
 };
 
 // ===== 1. KPIs COMPARATIVOS (Bar Chart) =====
@@ -55,12 +63,7 @@ if (ctxKpis) {
       maintainAspectRatio: false,
       plugins: {
         tooltip: {
-          backgroundColor: '#1A1A1A',
-          titleColor: '#FFFFFF',
-          bodyColor: '#E0E0E0',
-          borderColor: 'rgba(255,255,255,0.1)',
-          borderWidth: 1,
-          cornerRadius: 8,
+          ...tooltipStyle,
           padding: 12,
           callbacks: {
             label: function(context) {
@@ -81,7 +84,7 @@ if (ctxKpis) {
           ticks: { font: { size: 11, weight: 500 } }
         },
         y: {
-          grid: { color: 'rgba(255,255,255,0.04)' },
+          grid: { color: 'rgba(0,0,0,0.04)' },
           ticks: {
             callback: function(val) {
               if (val >= 1000000) return (val / 1000000).toFixed(1) + 'MI';
@@ -105,7 +108,7 @@ if (ctxCamp) {
       datasets: [{
         data: [1415.82, 93.49],
         backgroundColor: [COLORS.blue, COLORS.purple],
-        borderColor: '#222222',
+        borderColor: '#ffffff',
         borderWidth: 3,
         hoverOffset: 10,
       }]
@@ -120,12 +123,7 @@ if (ctxCamp) {
           labels: { padding: 24, font: { size: 12 } }
         },
         tooltip: {
-          backgroundColor: '#1A1A1A',
-          titleColor: '#FFFFFF',
-          bodyColor: '#E0E0E0',
-          borderColor: 'rgba(255,255,255,0.1)',
-          borderWidth: 1,
-          cornerRadius: 8,
+          ...tooltipStyle,
           callbacks: {
             label: function(context) {
               const total = context.dataset.data.reduce((a, b) => a + b, 0);
@@ -164,12 +162,7 @@ if (ctxConj) {
       plugins: {
         legend: { display: false },
         tooltip: {
-          backgroundColor: '#1A1A1A',
-          titleColor: '#FFFFFF',
-          bodyColor: '#E0E0E0',
-          borderColor: 'rgba(255,255,255,0.1)',
-          borderWidth: 1,
-          cornerRadius: 8,
+          ...tooltipStyle,
           callbacks: {
             label: function(context) {
               return `Alcance: ${context.parsed.x.toLocaleString('pt-BR')} pessoas`;
@@ -179,7 +172,7 @@ if (ctxConj) {
       },
       scales: {
         x: {
-          grid: { color: 'rgba(255,255,255,0.04)' },
+          grid: { color: 'rgba(0,0,0,0.04)' },
           ticks: {
             callback: function(val) {
               return (val / 1000).toFixed(0) + 'K';
@@ -204,8 +197,8 @@ if (ctxPos) {
       labels: ['Stories', 'Reels', 'Feed', 'Explorar'],
       datasets: [{
         data: [287890, 96922, 48389, 1869],
-        backgroundColor: [COLORS.purple, COLORS.orange, COLORS.blue, COLORS.yellow],
-        borderColor: '#222222',
+        backgroundColor: [COLORS.purple, COLORS.orange, COLORS.blue, COLORS.green],
+        borderColor: '#ffffff',
         borderWidth: 3,
         hoverOffset: 8,
       }]
@@ -220,12 +213,7 @@ if (ctxPos) {
           labels: { padding: 16, font: { size: 11 } }
         },
         tooltip: {
-          backgroundColor: '#1A1A1A',
-          titleColor: '#FFFFFF',
-          bodyColor: '#E0E0E0',
-          borderColor: 'rgba(255,255,255,0.1)',
-          borderWidth: 1,
-          cornerRadius: 8,
+          ...tooltipStyle,
           callbacks: {
             label: function(context) {
               return `${context.parsed.toLocaleString('pt-BR')} pessoas`;
@@ -247,8 +235,8 @@ if (ctxCpmPos) {
       datasets: [{
         label: 'CPM (R$)',
         data: [1.03, 1.05, 1.09, 1.08],
-        backgroundColor: [COLORS.purpleAlpha, COLORS.orangeAlpha, COLORS.blueAlpha, COLORS.yellowAlpha],
-        borderColor: [COLORS.purple, COLORS.orange, COLORS.blue, COLORS.yellow],
+        backgroundColor: [COLORS.purpleAlpha, COLORS.orangeAlpha, COLORS.blueAlpha, COLORS.greenAlpha],
+        borderColor: [COLORS.purple, COLORS.orange, COLORS.blue, COLORS.green],
         borderWidth: 2,
         borderRadius: 6,
       }]
@@ -259,12 +247,7 @@ if (ctxCpmPos) {
       plugins: {
         legend: { display: false },
         tooltip: {
-          backgroundColor: '#1A1A1A',
-          titleColor: '#FFFFFF',
-          bodyColor: '#E0E0E0',
-          borderColor: 'rgba(255,255,255,0.1)',
-          borderWidth: 1,
-          cornerRadius: 8,
+          ...tooltipStyle,
           callbacks: {
             label: function(context) {
               return `CPM: R$${context.parsed.y.toFixed(2)}`;
@@ -278,7 +261,7 @@ if (ctxCpmPos) {
           ticks: { font: { size: 12, weight: 500 } }
         },
         y: {
-          grid: { color: 'rgba(255,255,255,0.04)' },
+          grid: { color: 'rgba(0,0,0,0.04)' },
           ticks: {
             callback: function(val) {
               return 'R$' + val.toFixed(2);
@@ -316,7 +299,7 @@ if (ctxTemp) {
           backgroundColor: COLORS.purpleAlpha,
           borderWidth: 3,
           pointBackgroundColor: COLORS.purple,
-          pointBorderColor: '#222222',
+          pointBorderColor: '#ffffff',
           pointBorderWidth: 2,
           pointRadius: 5,
           pointHoverRadius: 7,
@@ -329,11 +312,11 @@ if (ctxTemp) {
           label: 'Investimento (R$)',
           data: [330, 360, 340, 280, 105.82],
           type: 'line',
-          borderColor: COLORS.yellow,
+          borderColor: COLORS.orange,
           borderWidth: 2,
           borderDash: [5, 5],
-          pointBackgroundColor: COLORS.yellow,
-          pointBorderColor: '#222222',
+          pointBackgroundColor: COLORS.orange,
+          pointBorderColor: '#ffffff',
           pointBorderWidth: 2,
           pointRadius: 4,
           pointHoverRadius: 6,
@@ -357,12 +340,7 @@ if (ctxTemp) {
           labels: { padding: 20, font: { size: 11 } }
         },
         tooltip: {
-          backgroundColor: '#1A1A1A',
-          titleColor: '#FFFFFF',
-          bodyColor: '#E0E0E0',
-          borderColor: 'rgba(255,255,255,0.1)',
-          borderWidth: 1,
-          cornerRadius: 8,
+          ...tooltipStyle,
           padding: 14,
           callbacks: {
             label: function(context) {
@@ -380,7 +358,7 @@ if (ctxTemp) {
           ticks: { font: { size: 11 }, maxRotation: 0 }
         },
         y: {
-          grid: { color: 'rgba(255,255,255,0.04)' },
+          grid: { color: 'rgba(0,0,0,0.04)' },
           position: 'left',
           ticks: {
             callback: function(val) {
@@ -397,7 +375,7 @@ if (ctxTemp) {
             callback: function(val) {
               return 'R$' + val;
             },
-            color: COLORS.yellow,
+            color: COLORS.orange,
           }
         }
       }
